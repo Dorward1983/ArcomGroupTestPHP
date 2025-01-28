@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    image: php:8.4-cli
+    container_name: php_app
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: php -S 0.0.0.0:8000
